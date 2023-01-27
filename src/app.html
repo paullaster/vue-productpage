@@ -180,7 +180,7 @@
         props: ["toggle", "cart"],
         computed: {
           cartTotal(){
-            return this.cart.carrots * 4.86;
+            return (this.cart.carrots * 4.86).toFixed(2);
           }
         },
         template: `
