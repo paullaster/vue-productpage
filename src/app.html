@@ -101,7 +101,7 @@
             this.showSidebar = !this.showSidebar;
           },
           randomIndex () {
-            const startIndex = Math.floor(Math.random());
+            const startIndex = Math.floor(Math.random() * (this.inventory.length/2));
           },
         },
         async mounted(){
