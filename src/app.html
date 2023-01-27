@@ -132,8 +132,8 @@
         methods: {
           getPrice(name, array){
             const item = array.find(
-              
-            )
+              (item) => item.name === name
+            );
           },
         },
         template: `
