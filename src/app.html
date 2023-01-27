@@ -123,7 +123,7 @@
         },
       });
       app.component("sidebar", {
-        props: ["toggle", "cart"],
+        props: ["toggle", "cart", "inventory"],
         computed: {
           cartTotal(){
             return (this.cart.carrots * 4.86).toFixed(2);
