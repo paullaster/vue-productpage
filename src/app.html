@@ -136,6 +136,9 @@
             const item = array.find((item) => item.name === name);
             return item.price.USD;
           },
+          itemTotal(){
+            return(getPrice(item, inventory) * value).toFix(2)
+          }
         },
         template: `
         <aside class="cart-container">
