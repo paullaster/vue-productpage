@@ -37,7 +37,7 @@
         <h2>Recommended</h2>
 
         <div class="recommended">
-          <div v-for="product in inventory.slice({{randomIndex()}})" :key="product.id" class="card">
+          <div v-for="product in inventory.slice({{randomIndex}})" :key="product.id" class="card">
             <div class="card-title">{{product.name}}</div>
             <div class="card-body">
               <i class="icofont-10x icofont-carrot"></i>
