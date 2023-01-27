@@ -36,7 +36,7 @@
       <main class="wrapper">
         <h2>Recommended</h2>
 
-        <div class="recommended">
+        <div v-for="product in invetory" class="recommended">
           <div class="card">
             <div class="card-title">Carrots</div>
             <div class="card-body">
@@ -104,7 +104,7 @@
         async mounted(){
           const response = await fetch ('./food.json');
           const data = await response.json();
-          inventory = data;
+          this.inventory = data;
         },
       });
       app.component("sidebar", {
