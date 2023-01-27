@@ -173,6 +173,7 @@
           const response = await fetch ('./food.json');
           const data = await response.json();
           inventory = data;
+          console.log(inventory);
         },
       });
       app.component("sidebar", {
