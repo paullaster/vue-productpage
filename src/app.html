@@ -172,7 +172,8 @@
           }
         },
         async mounted(){
-          const response = await fetch ('./food.json')
+          const response = await fetch ('./food.json');
+          const data = response.json();
         },
       });
       app.component("sidebar", {
