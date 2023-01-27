@@ -178,7 +178,11 @@
       });
       app.component("sidebar", {
         props: ["toggle", "cart"],
-        computed: {},
+        computed: {
+          cartTotal(){
+            
+          }
+        },
         template: `
         <aside class="cart-container">
           <div class="cart">
