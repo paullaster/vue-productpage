@@ -97,7 +97,7 @@
             return `icofont-10x icofont-${icon}`;
           },
           addToCart(name, itemID) {
-            //if (!this.cart[name]) return this.cart[name] = 0;
+            if (!this.cart[name]) this.cart[name] = 0;
             this.cart[name] += this.inventory[itemID].quantity;
             console.log(this.cart);
           },
