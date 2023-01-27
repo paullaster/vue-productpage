@@ -102,6 +102,7 @@
           },
           randomIndex () {
             const startIndex = Math.floor(Math.random() * (this.inventory.length/2));
+            const endIndex = Math.floor(Math.random() * this.inventory.length);
           },
         },
         async mounted(){
