@@ -166,7 +166,7 @@
                     <td>{{item}}</td>
                     <td>\${{getPrice(item, inventory)}}</td>
                     <td class="center">{{value}}</td>
-                    <td>\${{ (getPrice(item, inventory) * value).toFix(2)}}</td>
+                    <td>\${{ `(getPrice(item, inventory) * value).toFix(2)`}}</td>
                     <td class="center">
                       <button class="btn btn-light cart-remove">
                         &times;
