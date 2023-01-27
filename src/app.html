@@ -100,7 +100,9 @@
           toggleCart (){
             this.showSidebar = !this.showSidebar;
           },
-          randomIndex () {},
+          randomIndex () {
+            const startIndex = Math.floor(Math.random());
+          },
         },
         async mounted(){
           const response = await fetch ('./food.json');
