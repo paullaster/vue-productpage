@@ -93,7 +93,9 @@
           };
         },
         methods: {
-          productIcon(){},
+          productIcon(icon){
+            return ``;
+          },
           addToCart(type) {
             this.cart[type] += this.inventory[type];
             console.log(this.cart);
