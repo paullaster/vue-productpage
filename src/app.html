@@ -134,6 +134,7 @@
         methods: {
           getPrice(name, array) {
             const item = array.find((item) => item.name === name);
+            return item.price.USD;
           },
         },
         template: `
