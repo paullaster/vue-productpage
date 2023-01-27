@@ -147,11 +147,11 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="(item, value) of cart">
+                  <tr v-for="(value, item) in cart">
                     <td><i class="icofont-carrot icofont-3x"></i></td>
-                    <td>Carrot</td>
+                    <td>{{item}}</td>
                     <td>$1.00</td>
-                    <td class="center">{{item}}</td>
+                    <td class="center">{{value}}</td>
                     <td>\${{cart.carrots * 4.86}}</td>
                     <td class="center">
                       <button class="btn btn-light cart-remove">
