@@ -96,9 +96,9 @@
           productIcon(icon){
             return `icofont-10x icofont-${icon}`;
           },
-          addToCart(name) {
+          addToCart(name, itemID) {
             if (!cart[name]) return cart[name];
-            this.cart[name] += this.inventory[type];
+            this.cart[name] += this.inventory[itemID].quantity;
             console.log(this.cart);
           },
           toggleCart (){
