@@ -37,7 +37,11 @@
         <h2>Recommended</h2>
 
         <div class="recommended">
-          <div v-for="(product, index) in inventory.slice(0, 3)" :key="product.id" class="card">
+          <div
+            v-for="(product, index) in inventory.slice(0, 3)"
+            :key="product.id"
+            class="card"
+          >
             <div class="card-title">{{product.name}}</div>
             <div class="card-body">
               <i :class="productIcon(product.icon)"></i>
@@ -67,7 +71,10 @@
               </form>
             </div>
             <div class="card-footer">
-              <button @click="addToCart(product.name, index)" class="btn btn-light">
+              <button
+                @click="addToCart(product.name, index)"
+                class="btn btn-light"
+              >
                 Add to cart
               </button>
             </div>
@@ -75,13 +82,8 @@
         </div>
       </main>
 
-      <sidebar 
-        v-if="showSidebar" 
-        :toggle="toggleCart" 
-        :cart="cart" 
-        :inventory="inventory"
-        //:icon="productIcon()"
-      />
+      <sidebar v-if="showSidebar" :toggle="toggleCart" :cart="cart"
+      :inventory="inventory" //:icon="productIcon()" />
 
       <footer></footer>
     </div>
@@ -92,14 +94,12 @@
         data() {
           return {
             showSidebar: false,
-            inventory:[],
-            cart: {
-              
-            },
+            inventory: [],
+            cart: {},
           };
         },
         methods: {
-          productIcon(icon){
+          productIcon(icon) {
             return `icofont-10x icofont-${icon}`;
           },
           addToCart(name, itemID) {
@@ -107,17 +107,19 @@
             this.cart[name] += this.inventory[itemID].quantity;
             console.log(this.cart);
           },
-          toggleCart (){
+          toggleCart() {
             this.showSidebar = !this.showSidebar;
           },
-          randomIndex () {
-            const startIndex = Math.floor(Math.random() * (this.inventory.length/2));
+          randomIndex() {
+            const startIndex = Math.floor(
+              Math.random() * (this.inventory.length / 2)
+            );
             const endIndex = Math.floor(Math.random() * this.inventory.length);
             return [startIndex, endIndex];
           },
         },
-        async mounted(){
-          const response = await fetch ('./food.json');
+        async mounted() {
+          const response = await fetch("./food.json");
           const data = await response.json();
           this.inventory = data;
         },
@@ -125,15 +127,13 @@
       app.component("sidebar", {
         props: ["toggle", "cart", "inventory"],
         computed: {
-          cartTotal(){
+          cartTotal() {
             return (this.cart.carrots * 4.86).toFixed(2);
-          }
+          },
         },
         methods: {
-          getPrice(name, array){
-            const item = array.find(
-              (item) => item.name === name
-            );
+          getPrice(name, array) {
+            const item = array.find((item) => item.name === name);
           },
         },
         template: `
