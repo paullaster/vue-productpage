@@ -139,10 +139,10 @@
             if (Object.keys(obj).length === 0) return true;
             return false;
           },
-          calculateTotal(callback, object) {
+          calculateTotal(callback, object, array) {
             const total = Object.entries(object).reduce(
               (acc, curr, i) => {
-
+                return acc + (curr[1] * this.getPrice( curr[0]))
               }, 0
             )
           },
