@@ -128,14 +128,7 @@
       app.component("sidebar", {
         props: ["toggle", "cart", "inventory"],
         computed: {
-          itemsInCart(){
-            const items = Object.values(cart).reduce(
-              (acc, curr) => {
-                return acc + curr;
-              }, 0
-            );
-            return items;
-          },
+          
         },
         methods: {
           getPrice(name, array) {
