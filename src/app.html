@@ -120,7 +120,14 @@
           },
         },
         computed: {
-
+          itemsInCart(){
+            const items = Object.values(cart).reduce(
+              (acc, curr) => {
+                return acc + curr;
+              }, 0
+            );
+            return items;
+          },
         },
         async mounted() {
           const response = await fetch("./food.json");
