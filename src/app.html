@@ -189,7 +189,7 @@
   
               <p  v-if="checkEmptyCart(cart)" class="center"><em>No items in cart</em></p>
               <div class="spread">
-                <span><strong>Total:</strong> \${{cartTotal}}</span>
+                <span><strong>Total:</strong> \${{calculateTotal (get)}}</span>
                 <button class="btn btn-light">Checkout</button>
               </div>
             </div>
