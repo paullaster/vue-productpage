@@ -119,6 +119,9 @@
             return [startIndex, endIndex];
           },
         },
+        computed: {
+
+        },
         async mounted() {
           const response = await fetch("./food.json");
           const data = await response.json();
