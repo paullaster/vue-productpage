@@ -128,9 +128,7 @@
       app.component("sidebar", {
         props: ["toggle", "cart", "inventory"],
         computed: {
-          cartTotal() {
-            return (this.cart.carrots * 4.86).toFixed(2);
-          },
+          
         },
         methods: {
           getPrice(name, array) {
