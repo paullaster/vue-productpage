@@ -129,7 +129,11 @@
         props: ["toggle", "cart", "inventory"],
         computed: {
           itemsInCart(){
+            const items = Object.values(cart).reduce(
+              (acc, curr) => {
 
+              }, 0
+            )
           },
         },
         methods: {
