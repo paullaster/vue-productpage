@@ -141,8 +141,8 @@
           },
           calculateTotal(callback, object, array) {
             const total = Object.entries(object).reduce(
-              (acc, curr, i) => {
-                return acc + (curr[1] * this.getPrice( curr[0]))
+              (acc, curr) => {
+                return acc + (curr[1] * this.getPrice( curr[0], array))
               }, 0
             )
           },
