@@ -138,8 +138,8 @@
             return item.price.USD;
           },
           checkEmptyCart(obj){
-            if (Object.keys(obj).length === 0) return false;
-            return true;
+            if (Object.keys(obj).length === 0) return true;
+            return false;
           },
           //itemTotal(callback, itemName, arr, value){
           //  return (callback(itemName, arr) * value).toFixed(2)
