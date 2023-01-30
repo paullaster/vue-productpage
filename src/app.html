@@ -139,9 +139,9 @@
             if (Object.keys(obj).length === 0) return true;
             return false;
           },
-          //itemTotal(callback, itemName, arr, value){
-          //  return (callback(itemName, arr) * value).toFixed(2)
-          //}
+          cartTotal() {
+            return (this.cart.carrots * 4.86).toFixed(2);
+          },
         },
         template: `
         <aside class="cart-container">
