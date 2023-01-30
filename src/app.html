@@ -184,7 +184,7 @@
                 </tbody>
               </table>
   
-              <p class="center"><em>No items in cart</em></p>
+              <p  v-if="checkEmptyCart(cart)" class="center"><em>No items in cart</em></p>
               <div class="spread">
                 <span><strong>Total:</strong> \${{cartTotal}}</span>
                 <button class="btn btn-light">Checkout</button>
