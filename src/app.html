@@ -144,7 +144,8 @@
               (acc, curr) => {
                 return acc + (curr[1] * this.getPrice( curr[0], array))
               }, 0
-            )
+            );
+            return total.toFixed(2);
           },
         },
         template: `
