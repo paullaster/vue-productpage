@@ -192,7 +192,7 @@
                     <td class="center">{{quantity}}</td>
                     <td>\${{ (getPrice(item, inventory)* quantity).toFixed(2)}}</td>
                     <td class="center">
-                      <button @click="remove" class="btn btn-light cart-remove">
+                      <button @click="remove(item, cart)" class="btn btn-light cart-remove">
                         &times;
                       </button>
                     </td>
