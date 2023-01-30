@@ -137,8 +137,9 @@
             const item = array.find((item) => item.name === name);
             return item.price.USD;
           },
-          checkEmptyCart(){
-
+          checkEmptyCart(cart){
+            if (Object.keys(cart).length === 0) return false;
+            return true;
           },
           //itemTotal(callback, itemName, arr, value){
           //  return (callback(itemName, arr) * value).toFixed(2)
